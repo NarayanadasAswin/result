@@ -1,0 +1,1623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.liferay.poshi.runner.PoshiRunner" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-10-16T10:09:57" hostname="liferay-v2y9e9w3" time="3.406">
+  <properties/>
+  <testcase name="test[LocalFile.HelloPoshi#ViewHelloWorld]" classname="com.liferay.poshi.runner.PoshiRunner" time="3.406">
+    <failure message="com.jayway.jsonpath.PathNotFoundException: No results for path: $['companyId']" type="com.liferay.poshi.runner.PoshiRunnerException">com.jayway.jsonpath.PathNotFoundException: No results for path: $['companyId']
+	at JSONCompany.getCompanyIdNoSelenium(/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/json/company/JSONCompany.macro:119)
+	at JSONUserAPI._getUserIdByEmailAddress(/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/json/user/JSONUserAPI.macro:229)
+	at JSONUserSetter.setUserId(/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/json/user/JSONUserSetter.macro:95)
+	at JSONUser.agreeToTermsAndAnswerReminderQuery(/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/json/user/JSONUser.macro:192)
+	at User.firstLoginPG(/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:1904)
+	at HelloPoshi.ViewHelloWorld(/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/tests/HelloPoshi.testcase:5)
+	at com.jayway.jsonpath.internal.path.EvaluationContextImpl.getValue(EvaluationContextImpl.java:131)
+	at com.jayway.jsonpath.JsonPath.read(JsonPath.java:187)
+	at com.jayway.jsonpath.internal.JsonContext.read(JsonContext.java:164)
+	at com.jayway.jsonpath.internal.JsonContext.read(JsonContext.java:151)
+	at com.liferay.poshi.runner.util.JSONUtil.getWithJSONPath(JSONUtil.java:162)
+	at com.liferay.poshi.runner.util.JSONUtil.getWithJSONPath(JSONUtil.java:154)
+	at com.liferay.poshi.runner.util.JSONCurlUtil._getParsedResponse(JSONCurlUtil.java:147)
+	at com.liferay.poshi.runner.util.JSONCurlUtil.get(JSONCurlUtil.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.liferay.poshi.core.util.ExternalMethod.execute(ExternalMethod.java:31)
+	at com.liferay.poshi.core.util.ExternalMethod.execute(ExternalMethod.java:84)
+	at com.liferay.poshi.core.PoshiGetterUtil.getMethodReturnValue(PoshiGetterUtil.java:293)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.getVarMethodValue(PoshiRunnerExecutor.java:1279)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor._getVarValue(PoshiRunnerExecutor.java:1355)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runCommandVarElement(PoshiRunnerExecutor.java:283)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.parseElement(PoshiRunnerExecutor.java:266)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroCommandElement(PoshiRunnerExecutor.java:769)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroExecuteElement(PoshiRunnerExecutor.java:803)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.parseElement(PoshiRunnerExecutor.java:235)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroCommandElement(PoshiRunnerExecutor.java:769)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroExecuteElement(PoshiRunnerExecutor.java:803)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.parseElement(PoshiRunnerExecutor.java:235)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroCommandElement(PoshiRunnerExecutor.java:769)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroExecuteElement(PoshiRunnerExecutor.java:803)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.parseElement(PoshiRunnerExecutor.java:235)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroCommandElement(PoshiRunnerExecutor.java:769)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroExecuteElement(PoshiRunnerExecutor.java:803)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.parseElement(PoshiRunnerExecutor.java:235)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runIfElement(PoshiRunnerExecutor.java:682)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.parseElement(PoshiRunnerExecutor.java:248)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroCommandElement(PoshiRunnerExecutor.java:769)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroExecuteElement(PoshiRunnerExecutor.java:803)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.parseElement(PoshiRunnerExecutor.java:235)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runTestCaseCommandElement(PoshiRunnerExecutor.java:1102)
+	at com.liferay.poshi.runner.PoshiRunner._runNamespacedClassCommandName(PoshiRunner.java:318)
+	at com.liferay.poshi.runner.PoshiRunner._runCommand(PoshiRunner.java:294)
+	at com.liferay.poshi.runner.PoshiRunner.test(PoshiRunner.java:276)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at com.liferay.poshi.runner.PoshiRunner$RetryTestRule$RetryStatement.evaluate(PoshiRunner.java:389)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+Caused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $['companyId']
+	... 95 more
+</failure>
+    <system-out><![CDATA[
+###
+### LocalFile.HelloPoshi#ViewHelloWorld
+###
+
+Using "/home/me/Documents/master/liferay-portal/portal-web/build/webdriver/chromedriver" as "webdriver.chrome.driver" path
+Directory /home/me/Documents/master/liferay-portal/../bundles/logs does not exist.
+Directory /home/me/Documents/master/liferay-portal/../bundles/logs does not exist.
+Directory /home/me/Documents/master/liferay-portal/../bundles/logs does not exist.
+Directory /home/me/Documents/master/liferay-portal/../bundles/logs does not exist.
+Directory /home/me/Documents/master/liferay-portal/../bundles/logs does not exist.
+Executing commands: curl -X GET -u 'test@liferay.com:test' http://localhost:8080/api/jsonws/company/get-company-by-virtual-host/virtual-host/liferay-v2y9e9w3
+{}Finished executing commands.
+
+Total duration of 'LiferaySelenium.pause' usages: 0 ms
+Test retry attempts exceeded in Poshi Runner JVM
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 118.0.5993.70 (e52f33f30b91b4ddfad649acddc39ab570473b86-refs/branch-heads/5993@{#1216}) on port 14826
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Oct 16, 2023 3:39:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 118
+Oct 16, 2023 3:39:59 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.7.2` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+com.jayway.jsonpath.PathNotFoundException: No results for path: $['companyId']
+	at JSONCompany.getCompanyIdNoSelenium(/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/json/company/JSONCompany.macro:119)
+	at JSONUserAPI._getUserIdByEmailAddress(/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/json/user/JSONUserAPI.macro:229)
+	at JSONUserSetter.setUserId(/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/json/user/JSONUserSetter.macro:95)
+	at JSONUser.agreeToTermsAndAnswerReminderQuery(/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/json/user/JSONUser.macro:192)
+	at User.firstLoginPG(/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:1904)
+	at HelloPoshi.ViewHelloWorld(/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/tests/HelloPoshi.testcase:5)
+	at com.jayway.jsonpath.internal.path.EvaluationContextImpl.getValue(EvaluationContextImpl.java:131)
+	at com.jayway.jsonpath.JsonPath.read(JsonPath.java:187)
+	at com.jayway.jsonpath.internal.JsonContext.read(JsonContext.java:164)
+	at com.jayway.jsonpath.internal.JsonContext.read(JsonContext.java:151)
+	at com.liferay.poshi.runner.util.JSONUtil.getWithJSONPath(JSONUtil.java:162)
+	at com.liferay.poshi.runner.util.JSONUtil.getWithJSONPath(JSONUtil.java:154)
+	at com.liferay.poshi.runner.util.JSONCurlUtil._getParsedResponse(JSONCurlUtil.java:147)
+	at com.liferay.poshi.runner.util.JSONCurlUtil.get(JSONCurlUtil.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.liferay.poshi.core.util.ExternalMethod.execute(ExternalMethod.java:31)
+	at com.liferay.poshi.core.util.ExternalMethod.execute(ExternalMethod.java:84)
+	at com.liferay.poshi.core.PoshiGetterUtil.getMethodReturnValue(PoshiGetterUtil.java:293)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.getVarMethodValue(PoshiRunnerExecutor.java:1279)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor._getVarValue(PoshiRunnerExecutor.java:1355)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runCommandVarElement(PoshiRunnerExecutor.java:283)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.parseElement(PoshiRunnerExecutor.java:266)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroCommandElement(PoshiRunnerExecutor.java:769)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroExecuteElement(PoshiRunnerExecutor.java:803)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.parseElement(PoshiRunnerExecutor.java:235)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroCommandElement(PoshiRunnerExecutor.java:769)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroExecuteElement(PoshiRunnerExecutor.java:803)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.parseElement(PoshiRunnerExecutor.java:235)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroCommandElement(PoshiRunnerExecutor.java:769)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroExecuteElement(PoshiRunnerExecutor.java:803)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.parseElement(PoshiRunnerExecutor.java:235)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroCommandElement(PoshiRunnerExecutor.java:769)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroExecuteElement(PoshiRunnerExecutor.java:803)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.parseElement(PoshiRunnerExecutor.java:235)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runIfElement(PoshiRunnerExecutor.java:682)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.parseElement(PoshiRunnerExecutor.java:248)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroCommandElement(PoshiRunnerExecutor.java:769)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runMacroExecuteElement(PoshiRunnerExecutor.java:803)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.parseElement(PoshiRunnerExecutor.java:235)
+	at com.liferay.poshi.runner.PoshiRunnerExecutor.runTestCaseCommandElement(PoshiRunnerExecutor.java:1102)
+	at com.liferay.poshi.runner.PoshiRunner._runNamespacedClassCommandName(PoshiRunner.java:318)
+	at com.liferay.poshi.runner.PoshiRunner._runCommand(PoshiRunner.java:294)
+	at com.liferay.poshi.runner.PoshiRunner.test(PoshiRunner.java:276)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at com.liferay.poshi.runner.PoshiRunner$RetryTestRule$RetryStatement.evaluate(PoshiRunner.java:389)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+]]></system-err>
+  </testcase>
+  <system-out><![CDATA[-- listing properties --
+accessibility.standards.tags=wcag2a,wcag2aa,wcag21a,wcag21aa
+browser.type=chrome
+browser.version=100.0
+debug.stacktrace=false
+generate.command.signature=false
+get.location.max.retries=3
+get.location.timeout=30
+ignore.errors.file.name=/home/me/Documents/master/liferay-portal/portal-web/test-ignorable-error-lines.xml
+liferay.portal.branch=master
+liferay.portal.bundle=latest
+logger.resources.url=https://cdn.jsdelivr.net/gh/liferay/liferay-portal@0a761a7b7fbdec982293199e111134590f2a4d3b/modules/test/poshi/poshi-runner/src/main/resources/META-INF/resources
+output.dir.name=/home/me/Documents/master/liferay-portal/../bundles/poshi
+portal.url=http://liferay-v2y9e9w3:8080
+poshi.file.read.thread.pool=16
+project.dir=/home/me/Documents/master/liferay-portal
+proxy.server.enabled=false
+proxy.server.port=8082
+save.screenshot=true
+save.web.page=false
+tcat.enabled=false
+test.assert.console.errors=true
+test.assert.javascript.errors=true
+test.assert.warning.exceptions=true
+test.base.dir.name=test/functional/com/liferay/portalweb/
+test.batch.group.ignore.regex=portal.(acceptance|smoke|release).*|priority|testray.*
+test.batch.max.group.size=25
+test.batch.max.subgroup.size=1
+test.batch.run.type=single
+test.case.available.property.names=testray.main.component.name,analytics.cloud.enabled,apacheds.blank.user.password.enabled,apacheds.enabled,apacheds.multiple.users.enabled,app.server.bundles.size,app.server.type,app.server.types,asset.publisher.selection.style,aws.store.enabled,azure.store.enabled,blacklist.portal.profile.names.remove,blacklist.saml.algorithms,browser.type,captcha.enabled,cas.enabled,cluster.enabled,cluster.jdbc.ping,cluster.node.ip,cluster.session.replicated,cmis.repository.type,commerce.enabled,commerce.license.enabled,configure.read.write.database,content.targeting.release,create.osgi.hidden.file,custom.element.client.extension.created,custom.mysql.sql.statement,custom.properties,custom.startup.log.message,custom.system.properties,custom.upgrade.properties,data.archive.type,database.auto.upgrade.enabled,database.bare.enabled,database.hypersonic.embedded,database.jndi.enabled,database.lowercase.enabled,database.partition.enabled,database.sharding,database.types,database.upgrade.enabled,databases.size,default.layout.template.id,delete.precompiled.jsps,delete.sidecar.bundle,deploy.latest.marketplace.app.disabled,direct.deploy.enabled,dummy.socket.proxy.disabled,dxp.license.file,elastic.pki.authentication.enabled,elastic.xpack.configure.tls.cipher.suites,elastic.xpack.enabled,elasticsearch.ccr.enabled,elasticsearch.cluster.size,elasticsearch.jdk11.enabled,elasticsearch.ltr.enabled,elasticsearch.multiple.connections,embedded.elasticsearch.only,environment.acceptance,external.database.enabled,extraapps.plugins.includes,hook.plugins.includes,hot.deploy.osgi.app.includes,ibm.store.enabled,iframe.client.extension.created,ignore.errors,ignore.errors.delimiter,index.search.spell.checker.enabled,jmxremote.enabled,layouttpl.plugins.includes,legacy.database.dump,legacy.plugin.includes,legacy.plugins.social.office.version,license.required,liferay.dependency.jars,liferay.dependency.wars,liferay.online.properties,liferay.online.smoke,liferay.training.dependency.jars,log.context.enabled,marketplace.app.acceptance,marketplace.staging.enabled,minimum.slave.ram,ms.exchange.enabled,oauth2.application.enabled,openam.enabled,operating.system.types,osgi.app.includes,osgi.module.configuration.file.names,osgi.module.configurations,osgi.modules.includes,osgi.modules.includes.jdk11,plugins.deployment.type,portal.acceptance,portal.acceptance.tomcat.hypersonic,portal.acceptance.tomcat.mysql,portal.acceptance.wildfly.mariadb,portal.accessibility,portal.context,portal.fixpack.release,portal.hotfix.release,portal.proxy.path,portal.release,portal.release.environment,portal.smoke,portal.smoke.upgrades,portal.ssl.enabled,portal.stable,portal.suite.search.engine,portal.upstream,portal.version,portlet.plugins.includes,portlet.properties.calendar-portlet,portlet.properties.com.liferay.journal.service,portlet.properties.knowledge-base-portlet,portlet.properties.marketplace-portlet,portlet.properties.private-messaging-portlet,product.team.names,project.templates,property.group,rebuild.staging.database,release.feature.flags.disable.DISABLE_PRIVATE_LAYOUTS,remote.elasticsearch.enabled,rewrite.batch.statements,search.environment.suite.exclude,setup.wizard.enabled,skip.clean-app-server-deploy-dir,skip.install-patch,skip.start.app.server.index,skip.upgrade-legacy-database,slave.label,socks.proxy.enabled,socks.proxy.hosts,solr.enabled,solr.solrcloud.enabled,solr.ssl.authentication.enabled,solutions.acceptance,store.migration.test,test.assert.console.errors,test.assert.javascript.errors,test.assert.warning.exceptions,test.ignore.tomcat.ext.environment,test.name.skip.portal.instance,test.prepare.bundle.properties,test.run.environment,test.smtp.server.enabled,testcase.url,testray.component.names,testray.testcase.product.edition,theme.file.name,theme.plugins.includes,timeout.explicit.wait,txtai.enabled,web.plugins.includes,web.xml.timeout,websphere.ssl.truststore.enabled,workspaces.client.extension.names,workspaces.names
+test.case.required.property.names=testray.main.component.name
+test.csv.report.property.names=ignored,portal.acceptance,portal.fixpack.release,portal.release,portal.smoke,portal.stable,portal.upstream,priority,testray.component.names,testray.main.component.name
+test.dependencies.dir.name=dependencies
+test.dirs=../modules/apps/accessibility/accessibility-test/src/testFunctional,../modules/apps/account/account-test/src/testFunctional,../modules/apps/address/address-test/src/testFunctional,../modules/apps/asset/asset-auto-tagger-google-cloud-natural-language-test/src/testFunctional,../modules/apps/asset/asset-auto-tagger-test/src/testFunctional,../modules/apps/batch-engine/batch-engine-test/src/testFunctional,../modules/apps/batch-planner/batch-planner-test/src/testFunctional,../modules/apps/bulk/bulk-selection-test/src/testFunctional,../modules/apps/calendar/calendar-web-test/src/testFunctional,../modules/apps/click-to-chat/click-to-chat-test/src/testFunctional,../modules/apps/commerce/commerce-product-test/src/testFunctional,../modules/apps/configuration-admin/configuration-admin-test/src/testFunctional,../modules/apps/data-engine/data-engine-test/src/testFunctional,../modules/apps/depot/depot-test/src/testFunctional,../modules/apps/digital-signature/digital-signature-test/src/testFunctional,../modules/apps/dispatch/dispatch-test/src/testFunctional,../modules/apps/document-library-opener/document-library-opener-google-drive-test/src/testFunctional,../modules/apps/feature-flag/feature-flag-test/src/testFunctional/,../modules/apps/frontend-css/frontend-css-test/src/testFunctional,../modules/apps/frontend-data-set/frontend-data-set-test/src/testFunctional,../modules/apps/frontend-js/frontend-js-test/src/testFunctional,../modules/apps/headless/headless-admin-taxonomy/headless-admin-taxonomy-test/src/testFunctional,../modules/apps/headless/headless-batch-engine/headless-batch-engine-test/src/testFunctional,../modules/apps/headless/headless-builder/headless-builder-test/src/testFunctional,../modules/apps/headless/headless-delivery/headless-delivery-test/src/testFunctional,../modules/apps/headless/headless-discovery/headless-discovery-test/src/testFunctional,../modules/apps/headless/headless-site/headless-site-test/src/testFunctional,../modules/apps/headless/headless-user-notification/headless-user-notification-test/src/testFunctional,../modules/apps/item-selector/item-selector-test/src/testFunctional,../modules/apps/layout/layout-admin-web-test/src/testFunctional,../modules/apps/layout/layout-content-page-editor-web-test/src/testFunctional,../modules/apps/layout/layout-seo-web-test/src/testFunctional,../modules/apps/mail/mail-outlook-auth-connector-provider/src/testFunctional,../modules/apps/object/object-rest-test/src/testFunctional,../modules/apps/object/object-test/src/testFunctional,../modules/apps/on-demand-admin/on-demand-admin-test/src/testFunctional,../modules/apps/portal/portal-upgrade-test/src/testFunctional,../modules/apps/portal-language/portal-language-override-test/src/testFunctional,../modules/apps/portal-workflow/portal-workflow-test/src/testFunctional,../modules/apps/ratings/ratings-test/src/testFunctional,../modules/apps/redirect/redirect-test/src/testFunctional,../modules/apps/site-initializer/site-initializer-liferay-marketplace/site-initializer-liferay-marketplace-test/src/testFunctional,../modules/apps/site-initializer/site-initializer-liferaybotics/site-initializer-liferaybotics-test/src/testFunctional,../modules/apps/site-initializer/site-initializer-masterclass/site-initializer-masterclass-test/src/testFunctional,../modules/apps/site-initializer/site-initializer-raylife-ap/site-initializer-raylife-ap-test/src/testFunctional,../modules/apps/site-initializer/site-initializer-raylife-d2c/site-initializer-raylife-d2c-test/src/testFunctional,../modules/apps/site-initializer/site-initializer-team-extranet/site-initializer-team-extranet-test/src/testFunctional,../modules/apps/site-initializer/site-initializer-testray/site-initializer-testray-test/src/testFunctional,../modules/apps/translation/translation-test/src/testFunctional,../modules/dxp/apps/antivirus/antivirus-clamd-scanner-test/testFunctional,../modules/dxp/apps/document-library-opener/document-library-opener-onedrive-test/src/testFunctional,../modules/dxp/apps/osb/osb-site-initializer/osb-site-initializer-customer-portal/osb-site-initializer-customer-portal-test/src/testFunctional,../modules/dxp/apps/osb/osb-site-initializer/osb-site-initializer-evp/osb-site-initializer-evp-test/src/testFunctional,../modules/dxp/apps/osb/osb-site-initializer/osb-site-initializer-partner-portal/osb-site-initializer-partner-portal-test/src/testFunctional,../modules/dxp/apps/portal-reports-engine-console/portal-reports-engine-console-test/src/testFunctional,../modules/dxp/apps/portal-rules-engine-drools/portal-rules-engine-drools-test/src/testFunctional,../modules/dxp/apps/portal-workflow/portal-workflow-kaleo-designer-test/src/testFunctional,../modules/dxp/apps/portal-workflow/portal-workflow-metrics-test/src/testFunctional,../modules/dxp/apps/portal-workflow-kaleo-forms/portal-workflow-kaleo-forms-test/src/testFunctional,../modules/sdk/project-templates/project-templates/src/testFunctional,../modules/util/portal-tools-db-partition-virtual-instance-migrator/src/testFunctional,../modules/util/portal-tools-db-upgrade-client/src/testFunctional
+test.jvm.max.retries=0
+test.liferay.console.log.file.name=/home/me/Documents/master/liferay-portal/../bundles/logs/liferay.*.xml
+test.liferay.console.shut.down.file.name=/home/me/Documents/master/liferay-portal/console-shut-down
+test.name=LocalFile.HelloPoshi#ViewHelloWorld
+test.poshi.script.validation=false
+test.poshi.warnings.file.name=/home/me/Documents/master/liferay-portal/poshi-warnings.xml
+test.retry.command.wait.time=3
+test.run.environment=CE
+test.run.locally=false
+test.run.type=sequential
+test.skip.tear.down=false
+test.testcase.max.retries=0
+timeout.explicit.wait=60
+timeout.implicit.wait=3
+validation.resource.file.types=path,function,macro,testcase
+
+Start reading Poshi files.
+Directory /home/me/Documents/master/liferay-portal/modules/sdk/project-templates/project-templates/src/testFunctional does not exist.
+Directory /home/me/Documents/master/liferay-portal/modules/apps/frontend-data-set/frontend-data-set-test/src/testFunctional does not exist.
+Completed reading Poshi files in 4051ms.
+Start poshi validation.
+Completed poshi validation in 854ms.
+]]></system-out>
+  <system-err><![CDATA[SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.waitForTextCaseInsensitive" should be replaced with "selenium.waitForTextMatches" at:
+file:///home/me/Documents/master/liferay-portal/.gradle/caches/modules-2/files-2.1/com.liferay/com.liferay.poshi.runner.resources/1.0.14/45c037f5bd1aa8655fb049eb3136be852f6d24e8/com.liferay.poshi.runner.resources-1.0.14.jar!/default/testFunctional/functions/AssertClickNoError.function:25
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.assertTextCaseInsensitive" should be replaced with "selenium.assertTextMatches" at:
+file:///home/me/Documents/master/liferay-portal/.gradle/caches/modules-2/files-2.1/com.liferay/com.liferay.poshi.runner.resources/1.0.14/45c037f5bd1aa8655fb049eb3136be852f6d24e8/com.liferay.poshi.runner.resources-1.0.14.jar!/default/testFunctional/functions/AssertClickNoError.function:27
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.waitForPartialTextCaseInsensitive" should be replaced with "selenium.waitForTextMatches" at:
+file:///home/me/Documents/master/liferay-portal/.gradle/caches/modules-2/files-2.1/com.liferay/com.liferay.poshi.runner.resources/1.0.14/45c037f5bd1aa8655fb049eb3136be852f6d24e8/com.liferay.poshi.runner.resources-1.0.14.jar!/default/testFunctional/functions/AssertTextEquals.function:9
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.assertPartialTextCaseInsensitive" should be replaced with "selenium.assertTextMatches" at:
+file:///home/me/Documents/master/liferay-portal/.gradle/caches/modules-2/files-2.1/com.liferay/com.liferay.poshi.runner.resources/1.0.14/45c037f5bd1aa8655fb049eb3136be852f6d24e8/com.liferay.poshi.runner.resources-1.0.14.jar!/default/testFunctional/functions/AssertTextEquals.function:11
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.waitForTextCaseInsensitive" should be replaced with "selenium.waitForTextMatches" at:
+file:///home/me/Documents/master/liferay-portal/.gradle/caches/modules-2/files-2.1/com.liferay/com.liferay.poshi.runner.resources/1.0.14/45c037f5bd1aa8655fb049eb3136be852f6d24e8/com.liferay.poshi.runner.resources-1.0.14.jar!/default/testFunctional/functions/AssertTextEquals.function:25
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.assertTextCaseInsensitive" should be replaced with "selenium.assertTextMatches" at:
+file:///home/me/Documents/master/liferay-portal/.gradle/caches/modules-2/files-2.1/com.liferay/com.liferay.poshi.runner.resources/1.0.14/45c037f5bd1aa8655fb049eb3136be852f6d24e8/com.liferay.poshi.runner.resources-1.0.14.jar!/default/testFunctional/functions/AssertTextEquals.function:27
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.waitForNotPartialText" should be replaced with "selenium.waitForTextMatches" at:
+file:///home/me/Documents/master/liferay-portal/.gradle/caches/modules-2/files-2.1/com.liferay/com.liferay.poshi.runner.resources/1.0.14/45c037f5bd1aa8655fb049eb3136be852f6d24e8/com.liferay.poshi.runner.resources-1.0.14.jar!/default/testFunctional/functions/AssertTextNotEquals.function:9
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.robotType" should be replaced with "selenium.type" at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/functions/RobotType.function:8
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.assertNotPartialText" should be replaced with "selenium.assertTextMatches" at:
+file:///home/me/Documents/master/liferay-portal/.gradle/caches/modules-2/files-2.1/com.liferay/com.liferay.poshi.runner.resources/1.0.14/45c037f5bd1aa8655fb049eb3136be852f6d24e8/com.liferay.poshi.runner.resources-1.0.14.jar!/default/testFunctional/functions/AssertTextNotEquals.function:11
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.robotTypeShortcut" should be replaced with "selenium.typeKeys/selenium.sendKeys" at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/functions/RobotType.function:14
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.waitForPartialTextCaseInsensitive" should be replaced with "selenium.waitForTextMatches" at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/functions/AssertTextEquals.function:10
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.assertPartialTextCaseInsensitive" should be replaced with "selenium.assertTextMatches" at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/functions/AssertTextEquals.function:12
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.waitForPartialText" should be replaced with "selenium.waitForTextMatches" at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/functions/AssertTextEquals.function:36
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.assertPartialText" should be replaced with "selenium.assertTextMatches" at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/functions/AssertTextEquals.function:38
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.waitForTextCaseInsensitive" should be replaced with "selenium.waitForTextMatches" at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/functions/AssertTextEquals.function:46
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/applicationsmenunavigation/ApplicationsMenu.macro:73
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/applicationsmenunavigation/ApplicationsMenu.macro:73
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/OAuth2.macro:883
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/OAuth2.macro:897
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/journal/WebContentFolder.macro:24
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.waitForNotPartialText" should be replaced with "selenium.waitForTextMatches" at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/functions/AssertTextNotEquals.function:10
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/journal/WebContentFolder.macro:60
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/OAuth2.macro:986
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.assertTextCaseInsensitive" should be replaced with "selenium.assertTextMatches" at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/functions/AssertTextEquals.function:48
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/MockMock.macro:17
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Bookmark.macro:381
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/MockMock.macro:56
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/LexiconList.macro:39
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Bookmark.macro:435
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/LexiconList.macro:66
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/OAuth2.macro:1005
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/LexiconList.macro:96
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetpublisher/AssetPublisherPortlet.macro:1192
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/site/SitesDirectory.macro:36
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/site/SitesDirectory.macro:40
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/WikiPage.macro:228
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/WikiPage.macro:256
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/MockMock.macro:60
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/portal-workflow/portal-workflow-metrics-test/src/testFunctional/macros/WorkflowMetrics.macro:1164
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/journal/WebContentFolder.macro:139
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarPermissions.macro:10
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.assertNotPartialText" should be replaced with "selenium.assertTextMatches" at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/functions/AssertTextNotEquals.function:12
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/journal/WebContentFolder.macro:157
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/WikiPage.macro:394
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/MockMock.macro:64
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Bookmark.macro:443
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetpublisher/AssetPublisherPortlet.macro:1267
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Elasticsearch.macro:104
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/site/SitesDirectory.macro:44
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/portal-workflow/portal-workflow-metrics-test/src/testFunctional/macros/WorkflowMetrics.macro:1203
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Bookmark.macro:515
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetpublisher/AssetPublisherPortlet.macro:1376
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetpublisher/AssetPublisherPortlet.macro:1401
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/SystemSettings.macro:328
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetpublisher/AssetPublisherPortlet.macro:1415
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Bookmark.macro:532
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/SystemSettings.macro:335
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetpublisher/AssetPublisherPortlet.macro:1473
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "RobotType#robotTypeShortcut" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/tests/development/tools/testinginfrastructure/block/macro/TestUtils.macro:174
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Elasticsearch.macro:108
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Elasticsearch.macro:112
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/OAuth2.macro:1198
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/MockMock.macro:68
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/MockMock.macro:76
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/osb/osb-site-initializer/osb-site-initializer-partner-portal/osb-site-initializer-partner-portal-test/src/testFunctional/macros/PRMMDFRequest.macro:18
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/OAuth2.macro:1232
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/KBFolder.macro:30
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/journal/WebContentFolder.macro:171
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/WikiPage.macro:527
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/sitenavigation/breadcrumb/Breadcrumb.macro:148
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DynamicDataMapping.macro:825
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/portal-workflow/portal-workflow-metrics-test/src/testFunctional/macros/WorkflowMetrics.macro:1575
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Form.macro:1076
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/MockMock.macro:80
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/AnnouncementsEntry.macro:197
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/MockMock.macro:85
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetpublisher/AssetPublisherPortlet.macro:1556
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/MockMock.macro:91
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/MockMock.macro:120
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/MockMock.macro:120
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Form.macro:1144
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetpublisher/AssetPublisherPortlet.macro:1573
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DynamicDataMapping.macro:853
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetpublisher/AssetPublisherPortlet.macro:1577
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PublicationsPermissions.macro:162
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/site/SitesDirectory.macro:48
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/site/SitesDirectory.macro:52
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/site/SitesDirectory.macro:56
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/site/SitesDirectory.macro:60
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/site/SitesDirectory.macro:70
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "RobotType#robotTypeShortcut" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/tests/development/tools/testinginfrastructure/block/macro/TestUtils.macro:171
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "RobotType#robotTypeShortcut" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/tests/development/tools/testinginfrastructure/block/macro/TestUtils.macro:174
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetpublisher/AssetPublisherPortlet.macro:1581
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/tags/TagsNavigationPortlet.macro:7
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/fragment/FragmentsEditor.macro:29
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.waitForTextCaseInsensitive" should be replaced with "selenium.waitForTextMatches" at:
+file:///home/me/Documents/master/liferay-portal/.gradle/caches/modules-2/files-2.1/com.liferay/com.liferay.poshi.runner.resources/1.0.14/45c037f5bd1aa8655fb049eb3136be852f6d24e8/com.liferay.poshi.runner.resources-1.0.14.jar!/default/testFunctional/functions/DragAndDrop.function:35
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.waitForTextCaseInsensitive" should be replaced with "selenium.waitForTextMatches" at:
+file:///home/me/Documents/master/liferay-portal/.gradle/caches/modules-2/files-2.1/com.liferay/com.liferay.poshi.runner.resources/1.0.14/45c037f5bd1aa8655fb049eb3136be852f6d24e8/com.liferay.poshi.runner.resources-1.0.14.jar!/default/testFunctional/functions/DragAndDrop.function:65
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.waitForPartialTextCaseInsensitive" should be replaced with "selenium.waitForTextMatches" at:
+file:///home/me/Documents/master/liferay-portal/.gradle/caches/modules-2/files-2.1/com.liferay/com.liferay.poshi.runner.resources/1.0.14/45c037f5bd1aa8655fb049eb3136be852f6d24e8/com.liferay.poshi.runner.resources-1.0.14.jar!/default/testFunctional/functions/DragAndDrop.function:107
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:315
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/WikiPage.macro:785
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/LexiconTable.macro:69
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortletEntry.macro:218
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/WikiPage.macro:1089
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/WikiPage.macro:1259
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/portal-rules-engine-drools/portal-rules-engine-drools-test/src/testFunctional/macros/Drools.macro:4
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/MockMock.macro:298
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/MockMock.macro:321
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/data-engine/data-engine-test/src/testFunctional/macros/DERenderer.macro:271
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/portal-rules-engine-drools/portal-rules-engine-drools-test/src/testFunctional/macros/Drools.macro:8
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/WikiPage.macro:1282
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:438
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetpublisher/AssetPublisherPortlet.macro:1621
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/portal-rules-engine-drools/portal-rules-engine-drools-test/src/testFunctional/macros/Drools.macro:14
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/portal-rules-engine-drools/portal-rules-engine-drools-test/src/testFunctional/macros/Drools.macro:18
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetpublisher/AssetPublisherPortlet.macro:1639
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:451
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:577
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/SpamModerationPortlet.macro:47
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/CurrencyConverter.macro:20
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/CurrencyConverter.macro:24
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:885
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:903
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:909
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:363
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:370
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:230
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/object/object-test/src/testFunctional/macros/ObjectPortlet.macro:144
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetlist/AssetListsAdmin.macro:594
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/analyticscloud/ACDXPSettings.macro:539
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetlist/AssetListsAdmin.macro:598
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:494
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/SAMLRole.macro:16
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:533
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/SAMLRole.macro:133
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Blueprints.macro:317
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/VideoShortcut.macro:202
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/upgrades/ValidateOnlineEditingUpgrade.macro:26
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:596
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Blueprints.macro:325
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:659
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/LexiconEntry.macro:242
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/osb/osb-site-initializer/osb-site-initializer-partner-portal/osb-site-initializer-partner-portal-test/src/testFunctional/macros/PRMMDFRequest.macro:912
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/VideoShortcut.macro:209
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:242
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1278
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:916
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetpublisher/AssetPublisherPortlet.macro:1662
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/WikiPage.macro:1286
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/VideoShortcut.macro:216
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:937
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetpublisher/AssetPublisherPortlet.macro:1666
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/WikiPage.macro:1354
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:943
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/GDPR.macro:297
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "RobotType#robotTypeShortcut" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/OAuthClient.macro:136
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/portal-workflow/portal-workflow-test/src/testFunctional/macros/ProcessBuilderConfiguration.macro:17
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/WikiPage.macro:1473
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:722
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/GDPR.macro:302
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/assetpublisher/AssetPublisherPortlet.macro:1677
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/osb/osb-site-initializer/osb-site-initializer-partner-portal/osb-site-initializer-partner-portal-test/src/testFunctional/macros/PRMMDFRequest.macro:923
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/GDPR.macro:331
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/GDPR.macro:336
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/portal-workflow/portal-workflow-test/src/testFunctional/macros/WorkflowDocumentsAndMedia.macro:68
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Organization.macro:470
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/osb/osb-site-initializer/osb-site-initializer-partner-portal/osb-site-initializer-partner-portal-test/src/testFunctional/macros/PRMMDFRequest.macro:1114
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/data-engine/data-engine-test/src/testFunctional/macros/ValidateDataEngineUpgrade.macro:11
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PublicationsTemplate.macro:165
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/BlogsConfiguration.macro:70
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/sitenavigation/languageportlet/LanguagePortlet.macro:50
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:247
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/BlogsConfiguration.macro:165
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/BlogsConfiguration.macro:169
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:259
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/BlogsConfiguration.macro:199
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:264
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/BlogsConfiguration.macro:261
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/osb/osb-site-initializer/osb-site-initializer-partner-portal/osb-site-initializer-partner-portal-test/src/testFunctional/macros/PRMMDFRequest.macro:1122
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:1064
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1288
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/AppManager.macro:144
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:276
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/AppManager.macro:171
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:281
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:1068
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/AppManager.macro:178
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1292
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:295
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:1072
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1303
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:1076
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/sitenavigation/languageportlet/LanguagePortlet.macro:170
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:1116
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:513
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/upgrades/ValidateInstanceSettingsUpgrade.macro:105
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.waitForTextCaseInsensitive" should be replaced with "selenium.waitForTextMatches" at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/functions/DragAndDrop.function:49
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/UserGroup.macro:25
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/UserGroup.macro:29
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:1007
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/sitenavigation/sitenavigationmenu/NavigationMenusAdmin.macro:504
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/UserGroup.macro:118
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:1030
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:554
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/layout/sitepage/Page.macro:60
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/UserGroup.macro:256
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:614
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Subscriptions.macro:24
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:702
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:709
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/layout/sitepage/Page.macro:287
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:783
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:1574
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/rss/RSSPortlet.macro:48
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/rss/RSSPortlet.macro:106
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:1559
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/rss/RSSPortlet.macro:161
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1313
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:1161
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/rss/RSSPortlet.macro:177
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/rss/RSSPortlet.macro:185
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:1564
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1317
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/asset/categories/CategoriesNavigationPortlet.macro:61
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:1175
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/sitenavigation/sitenavigationmenu/NavigationMenusAdmin.macro:721
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/WikiTable.macro:27
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:1170
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:922
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/portal-workflow/portal-workflow-test/src/testFunctional/macros/KaleoFormsNewSubmissions.macro:122
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/layout/sitepage/Page.macro:282
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Segmentation.macro:98
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.waitForTextCaseInsensitive" should be replaced with "selenium.waitForTextMatches" at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/functions/DragAndDrop.function:85
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/upgrades/ValidateInstanceSettingsUpgrade.macro:109
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/depot/depot-test/src/testFunctional/macros/Depot.macro:1175
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:911
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.antCommand" should be replaced with "AntCommands.runCommand" at:
+file:///home/me/Documents/master/liferay-portal/.gradle/caches/modules-2/files-2.1/com.liferay/com.liferay.poshi.runner.resources/1.0.14/45c037f5bd1aa8655fb049eb3136be852f6d24e8/com.liferay.poshi.runner.resources-1.0.14.jar!/default/testFunctional/functions/AntCommand.function:6
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:922
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:992
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:1569
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/journal/WebContentNavigator.macro:19
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:987
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:992
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/ContentPerformance.macro:23
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:1574
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/CookieConsentAdmin.macro:15
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/CookieConsentAdmin.macro:39
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/CookieConsentAdmin.macro:54
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:1137
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/CookieConsentAdmin.macro:105
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "RobotType#robotTypeShortcut" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/liferayfaces/PortalShowcase.macro:6
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.waitForTextCaseInsensitive" should be replaced with "selenium.waitForTextMatches" at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/functions/DragAndDrop.function:115
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/layout/sitepage/Page.macro:287
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/BlogsRecentBloggersPortlet.macro:22
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.waitForPartialTextCaseInsensitive" should be replaced with "selenium.waitForTextMatches" at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/functions/DragAndDrop.function:167
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/journal/WebContentNavigator.macro:14
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/portal-workflow/portal-workflow-test/src/testFunctional/macros/KaleoFormsNewSubmissions.macro:129
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/journal/WebContentNavigator.macro:19
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1587
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "RobotType#robotTypeShortcut" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/liferayfaces/PortalShowcase.macro:10
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "RobotType#robotTypeShortcut" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/liferayfaces/PortalShowcase.macro:14
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "RobotType#robotTypeShortcut" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/liferayfaces/PortalShowcase.macro:18
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1871
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:411
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:416
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:421
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1887
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:426
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Role.macro:34
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1891
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Role.macro:167
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:139
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:152
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Role.macro:305
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:378
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1903
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:397
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:1123
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/CookieConsentAdmin.macro:105
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/layout/displaypagetemplate/DisplayPageTemplatesAdmin.macro:145
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Role.macro:366
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/CookieConsentAdmin.macro:160
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/CookieConsentAdmin.macro:160
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Role.macro:389
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:434
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/layout/sitepage/Page.macro:350
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "RobotType#robotTypeShortcut" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/liferayfaces/PortalShowcase.macro:22
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/portal-workflow/portal-workflow-test/src/testFunctional/macros/KaleoFormsNewSubmissions.macro:136
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "RobotType#robotTypeShortcut" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/liferayfaces/PortalShowcase.macro:32
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1907
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.waitForTextCaseInsensitive" should be replaced with "selenium.waitForTextMatches" at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/functions/AssertClickNoError.function:31
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "RobotType#robotTypeShortcut" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/liferayfaces/PortalShowcase.macro:36
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "RobotType#robotTypeShortcut" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/liferayfaces/PortalShowcase.macro:40
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/liferayfaces/PortalShowcase.macro:98
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/liferayfaces/PortalShowcase.macro:104
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/liferayfaces/PortalShowcase.macro:110
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/liferayfaces/PortalShowcase.macro:138
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/liferayfaces/PortalShowcase.macro:154
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/portal-workflow-kaleo-forms/portal-workflow-kaleo-forms-test/src/testFunctional/macros/KaleoFormsAdmin.macro:368
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1911
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarPage.macro:44
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/portal-workflow-kaleo-forms/portal-workflow-kaleo-forms-test/src/testFunctional/macros/KaleoFormsAdmin.macro:758
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:1132
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1921
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:416
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:435
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:1137
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1926
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:1154
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:616
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/portal-workflow/portal-workflow-kaleo-designer-test/src/testFunctional/macros/KaleoDesigner.macro:275
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:645
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1931
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:808
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1936
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:818
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:1385
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/upgrades/ValidateSearchUpgrade.macro:63
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/osb/osb-site-initializer/osb-site-initializer-customer-portal/osb-site-initializer-customer-portal-test/src/testFunctional/macros/CP2ActivationKeys.macro:200
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Deprecated method "selenium.assertTextCaseInsensitive" should be replaced with "selenium.assertTextMatches" at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/functions/AssertClickNoError.function:33
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/portal-workflow/portal-workflow-test/src/testFunctional/macros/KaleoFormsNewSubmissions.macro:143
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:441
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/portal-workflow/portal-workflow-test/src/testFunctional/macros/KaleoFormsNewSubmissions.macro:150
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/portal-workflow/portal-workflow-test/src/testFunctional/macros/KaleoFormsNewSubmissions.macro:157
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:448
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/portal-workflow/portal-workflow-test/src/testFunctional/macros/KaleoFormsNewSubmissions.macro:164
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/portal-workflow/portal-workflow-test/src/testFunctional/macros/KaleoFormsNewSubmissions.macro:171
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:455
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/portal-workflow/portal-workflow-test/src/testFunctional/macros/KaleoFormsNewSubmissions.macro:178
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/portal-workflow/portal-workflow-test/src/testFunctional/macros/KaleoFormsNewSubmissions.macro:185
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:907
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/Role.macro:415
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:1941
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2136
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:915
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:504
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:2066
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:1586
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:518
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/dxp/apps/portal-workflow-kaleo-forms/portal-workflow-kaleo-forms-test/src/testFunctional/macros/KaleoFormsAdmin.macro:997
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:525
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:2095
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:533
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:1568
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:541
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:956
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:2099
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:1586
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:548
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:964
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:570
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:972
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:577
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:1657
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:2175
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:980
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/commerce/commerce-product-test/src/testFunctional/macros/CommerceCheckout.macro:584
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:1047
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:2179
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:1057
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:1067
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:1077
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:2183
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2702
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:1104
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:2043
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/calendar/calendar-web-test/src/testFunctional/macros/CalendarEvent.macro:2187
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2706
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:1110
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:2025
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:1129
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2710
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:2043
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/translation/translation-test/src/testFunctional/macros/Translations.macro:698
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:1203
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/translation/translation-test/src/testFunctional/macros/Translations.macro:706
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2714
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/translation/translation-test/src/testFunctional/macros/Translations.macro:714
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/PortalSettings.macro:1213
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2718
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/translation/translation-test/src/testFunctional/macros/Translations.macro:803
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2723
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/translation/translation-test/src/testFunctional/macros/Translations.macro:807
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/translation/translation-test/src/testFunctional/macros/Translations.macro:844
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2747
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/translation/translation-test/src/testFunctional/macros/Translations.macro:856
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/translation/translation-test/src/testFunctional/macros/Translations.macro:861
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2753
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/translation/translation-test/src/testFunctional/macros/Translations.macro:930
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:2209
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2759
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:2278
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2767
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/modules/apps/translation/translation-test/src/testFunctional/macros/Translations.macro:1014
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:2310
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:2335
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2778
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2787
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:2493
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2793
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2812
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2819
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2826
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2842
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:2664
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/User.macro:2994
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3046
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3052
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3160
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3154
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3160
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3254
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3382
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3396
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3402
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3408
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3414
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3420
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3549
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3567
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3626
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3634
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3771
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3785
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3801
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3823
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:3875
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:4142
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:4160
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:4182
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:4237
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:4249
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:4266
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:4279
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:4369
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:4374
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:4382
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:4402
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:4408
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:4553
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:4577
+Oct 16, 2023 3:39:57 PM com.liferay.poshi.core.PoshiValidation validateDeprecatedFunction
+WARNING: Use of function "AssertTextEquals#assertPartialText" contains deprecated selenium method at:
+/home/me/Documents/master/liferay-portal/portal-web/test/functional/com/liferay/portalweb/macros/DMDocument.macro:4602
+]]></system-err>
+</testsuite>
